@@ -45,12 +45,12 @@ header h1 {
     overflow: hidden;
     margin: 10px auto 20px;
     /* max-width: 600px;  Let's remove this limit for now */
-    width: 100%; /* Occupy 80% of the header's width */
+    width: 80%; /* Occupy 80% of the header's width */
     max-height: 400px; /* Added a maximum height */
 }
 
 .image-container img {
-    width: 00%;
+    width: 100%;
     height: auto;
     display: block;
     object-fit: cover; /* Maintain aspect ratio and cover container */
