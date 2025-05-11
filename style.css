@@ -4,8 +4,8 @@
 :root {
     --primary-color: #026773;
     --secondary-color: #3CA6A6;
-    --text-color: #F2E3D5; /* Lighter text for contrast */
-    --background-color: #204A4F; /* Darker teal background */
+    --text-color: #F2E3D5;
+    --background-color: #204A4F;
     --button-hover: #012E40;
     --font-body: "Chocolate Classical Sans", serif;
     --font-titulo: "Rakkas", serif;
@@ -19,70 +19,60 @@
     font-family: var(--font-body);
 }
 
-/* Corpo da página */
+/* Body Styles */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-h1 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #333; /* Darker heading color in sections */
-}
-
-h3 {
-    margin-top: 20px;
-    font-size: 1.2em;
-}
-
-p {
-    margin-top: 15px;
-    font-size: 1em;
-}
-
-img {
-    max-width: 100%; /* Make image responsive within its container */
-    display: block;
-}
-
 /* Header Styles */
 header {
-    background-color: var(--secondary-color); /* Light teal header */
-    padding: 20px;
+    background-color: var(--secondary-color);
     text-align: center;
+    padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 .image-container {
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 15px;
-    max-width: 600px; /* Limit image width */
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto 20px;
+    /* max-width: 600px;  Let's remove this limit for now */
+    width: 80%; /* Occupy 80% of the header's width */
+    max-height: 400px; /* Added a maximum height */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
 }
 
 header p {
-    margin-top: 15px;
     font-size: 1.1em;
     padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 10px;
 }
 
 nav ul li {
@@ -92,9 +82,9 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: var(--text-color);
+    background-color: var(--primary-color);
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: var(--primary-color); /* Darker teal nav */
 }
 
 nav a:hover {
@@ -108,11 +98,29 @@ main {
 }
 
 .conteudo {
-    background-color: #f0f0f0; /* Light grey content sections */
+    background-color: #f0f0f0;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    color: #333; /* Darker text in content sections */
+    color: #333;
+}
+
+.conteudo h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.conteudo h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.conteudo p {
+    font-size: 1em;
+    margin-bottom: 15px;
 }
 
 .cta-button {
@@ -122,7 +130,7 @@ main {
     color: var(--text-color);
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .cta-button:hover {
@@ -150,7 +158,7 @@ footer {
     text-decoration: underline;
 }
 
-/* Responsividade */
+/* Responsiveness */
 @media (max-width: 768px) {
     main {
         width: 90%;
